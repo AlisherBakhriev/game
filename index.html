@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberArena Pro Championship</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:wght@300;500&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#tournaments">Турниры</a></li>
+            <li><a href="#games">Игры</a></li>
+            <li><a href="#register">Регистрация</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="cyber-glitch">CYBER ARENA PRO</h1>
+            <p>Киберспортивная революция 2024</p>
+            <button class="neon-btn">Смотреть трансляции</button>
+        </div>
+    </section>
+
+    <section id="tournaments">
+        <div class="tournament-bracket">
+            <div class="bracket-card">
+                <h3>CS:GO World Championship</h3>
+                <div class="prize-pool">Призовой фонд: $2,000,000</div>
+                <p>Формат: 5v5 | Double Elimination</p>
+                <p>Дата: 15-25 Августа</p>
+                <button class="neon-btn register-btn" data-game="csgo">Участвовать</button>
+            </div>
+
+            <div class="bracket-card">
+                <h3>Dota 2 International</h3>
+                <div class="prize-pool">Призовой фонд: $3,500,000</div>
+                <p>Формат: 5v5 | Round Robin</p>
+                <p>Дата: 1-15 Сентября</p>
+                <button class="neon-btn register-btn" data-game="dota2">Участвовать</button>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <div class="registration-modal" id="registrationModal">
+        <h3>Регистрация на турнир</h3>
+        <form id="registrationForm">
+            <div style="margin: 1rem 0;">
+                <label>Никнейм:</label>
+                <input type="text" required style="width: 100%; padding: 0.5rem; margin-top: 0.5rem; background: #222; border: 1px solid var(--neon-blue); color: white;">
+            </div>
+            
+            <div style="margin: 1rem 0;">
+                <label>Email:</label>
+                <input type="email" required style="width: 100%; padding: 0.5rem; margin-top: 0.5rem; background: #222; border: 1px solid var(--neon-blue); color: white;">
+            </div>
+
+            <div style="margin: 1rem 0;">
+                <label>Игра:</label>
+                <select id="gameSelect" required style="width: 100%; padding: 0.5rem; margin-top: 0.5rem; background: #222; border: 1px solid var(--neon-blue); color: white;">
+                    <option value="csgo">CS:GO</option>
+                    <option value="dota2">Dota 2</option>
+                    <option value="valorant">Valorant</option>
+                </select>
+            </div>
+
+            <button type="submit" class="neon-btn">Подтвердить регистрацию</button>
+        </form>
+    </div>
+
+
+    
+    <section id="games">
+      <div class="game-selector">
+          <div class="game-icon">
+              <img src="https://coop-land.ru/uploads/posts/2023-10/1697170617_m.jpg" alt="CS:GO" class="game-image">
+              <p>CS:GO</p>
+          </div>
+          <div class="game-icon">
+              <img src="https://business-portal-bucket.s3.amazonaws.com/media/images/41e172c318357d632f53b92d8cb38661_large_cover.original.jpg" alt="Dota 2" class="game-image">
+              <p>Dota 2</p>
+          </div>
+          <div class="game-icon">
+              <img src="https://assets.xboxservices.com/assets/36/b5/36b52fa8-e71b-4435-888a-cecb98d3876a.jpg?n=153142244433_GLP-Page-Hero-0_1083x1222_02.jpg" alt="Valorant" class="game-image">
+              <p>Valorant</p>
+          </div>
+      </div>
+  </section>
+
+ 
+  <section class="my-registrations" id="myRegistrations">
+      <h2>Мои регистрации</h2>
+      <div id="registrationsList"></div>
+
+
+
+<script src="./index.js"></script>
+</body>
+</html>
